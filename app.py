@@ -10,6 +10,11 @@ load_dotenv(dotenv_path)
 
 MONGODB_URI = os.environ.get("mongodb+srv://chelsedevi:chelsedevi06@cluster0.fv5ilwe.mongodb.net/?retryWrites=true&w=majority")
 DB_NAME = os.environ.get("dbsparta")
+connection_string ='mongodb+srv://chelsedevi:chelsedevi06@cluster0.fv5ilwe.mongodb.net/?retryWrites=true&w=majority'
+
+client = MongoClient(connection_string)
+db = client.dbsparta
+
 app = Flask('/')
 
 @app.route('/')
